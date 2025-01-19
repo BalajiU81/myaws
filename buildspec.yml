@@ -4,6 +4,9 @@ phases:
     commands:
       - echo Installing Dependencies...
       - apt-get update && apt-get install -y zip
+  pre_build:
+    commands:
+      - echo prebuild phase started...
   build:
     commands:
       - echo building application...
