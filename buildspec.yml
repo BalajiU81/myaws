@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo Installing Dependencies...
+      - apt-get update && apt-get install -y zip
+  build:
+    commands:
+      - echo building application...
+      - echo "sample application build!" > output.txt
+  post_build:
+    commands:
+      - echo Build Complete!
+  artifacts:
+    files:
+      - output.txt
